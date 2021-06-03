@@ -36,3 +36,35 @@ WHERE students.Name = "Layal";
 UPDATE graduates
 SET Graduation ="2021-06-01"
 WHERE graduates.Name ="Layal"
+
+
+JOIN 
+1)
+SELECT employees.Name , employees.Company , companies.Date
+FROM employees
+JOIN companies ON companies.Name = employees.Company
+
+
+2)
+SELECT employees.Name
+FROM employees
+JOIN companies ON companies.Name = employees.Company
+WHERE companies.Date<2000
+
+
+3)
+
+"WE CAN SOLVE IT WITHOUT JOIN "
+SELECT distinct  employees.Company 
+FROM employees 
+WHERE employees.Role="Graphic Designer"
+
+OR 
+
+SELECT distinct companies.Name 
+FROM companies
+JOIN employees on employees.Company= companies.Name
+WHERE employees.Role ="Graphic Designer"
+
+
+
